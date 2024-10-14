@@ -34,13 +34,18 @@ char *ft_strtrim(char const *str, char const *set)
 	char *res;
 
 	i = 0;
+	if (ft_strlen(str) == 0)
+		return (ft_strdup(""));
 	while (str[i] && ft_ischrinset(str[i], set))
 		i++;
 	start_index = i;
 	i = ft_strlen(str) - 1;
-	while (str[i] && ft_ischrinset(str[i], set))
+	while (str[i] && ft_ischrinset(str[i], set) && i > start_index)
 		i--;
 	end_len = i - start_index + 1;
+	if (end_len == 0) {
+    	return (ft_strdup(""));
+	}
 	res = ft_substr(str, start_index, end_len);
 	return (res);
 }
