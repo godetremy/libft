@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int i;
-	int x;
-	char *res;
+	int		i;
+	int		x;
+	char	*res;
 
 	res = ft_calloc(ft_strlen(s1) + ft_strlen(s2) + 1, sizeof(char));
 	if (!res)

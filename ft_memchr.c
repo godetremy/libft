@@ -14,8 +14,8 @@
 
 void	*ft_memchr(const void *memory, int value, t_size size)
 {
-	t_size i;
-	const char *data;
+	t_size		i;
+	const char	*data;
 
 	i = 0;
 	data = (const char *) memory;

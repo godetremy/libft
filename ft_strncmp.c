@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-int ft_strncmp(const char *s1, const char *s2, t_size size)
+int	ft_strncmp(const char *s1, const char *s2, t_size size)
 {
-	t_size i;
-	const unsigned char *str1;
-	const unsigned char *str2;
+	t_size				i;
+	const unsigned char	*str1;
+	const unsigned char	*str2;
 
 	i = 0;
 	str1 = (unsigned char *) s1;

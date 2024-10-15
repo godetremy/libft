@@ -12,11 +12,11 @@
 
 #include "libft.h"
 
-char *ft_substr(char const *str, unsigned int start, t_size len)
+char	*ft_substr(char const *str, unsigned int start, t_size len)
 {
-	char *res;
-	t_size i;
-	t_size str_len;
+	char	*res;
+	t_size	i;
+	t_size	str_len;
 
 	str_len = ft_strlen(str);
 	if (start >= ft_strlen(str))
@@ -32,6 +32,5 @@ char *ft_substr(char const *str, unsigned int start, t_size len)
 		res[i] = str[i + start];
 		i++;
 	}
-	return res;
+	return (res);
 }
-

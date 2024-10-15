@@ -12,26 +12,28 @@
 
 #include "libft.h"
 
-int get_start_index(const char *str)
+static int	get_start_index(const char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
+		|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
 		i++;
-	return i;
+	return (i);
 }
 
 int	ft_atoi(const char *str)
 {
-	int	pow;
-	int	i;
+	int			pow;
+	int			i;
 	long int	result;
 
 	pow = 1;
 	i = ft_strlen(str) - 1;
 	result = 0;
-	while (i > get_start_index(str) - !(str[get_start_index(str)] == '-' || str[get_start_index(str)] == '+') && !(str[i] == 43 && i == 0))
+	while (i > get_start_index(str) - !(str[get_start_index(str)] == '-'
+			|| str[get_start_index(str)] == '+') && !(str[i] == 43 && i == 0))
 	{
 		if (ft_isdigit(str[i]))
 		{
@@ -46,11 +48,6 @@ int	ft_atoi(const char *str)
 		i--;
 	}
 	if (str[get_start_index(str)] == '-')
-	{
 		result *= -1;
-	}
 	return (result);
 }
-
-//TODO: Ajouter strtrim pour la normes
-

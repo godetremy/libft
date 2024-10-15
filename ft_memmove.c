@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-void * ft_memmove(void *destination, const void *source, t_size size)
+void	*ft_memmove(void *destination, const void *source, t_size size)
 {
-	char *dest;
-	const char *src;
+	char		*dest;
+	const char	*src;
 
 	dest = (char *) destination;
 	src = (char *) source;
@@ -23,7 +23,8 @@ void * ft_memmove(void *destination, const void *source, t_size size)
 		return (0);
 	if (dest < src)
 		return (ft_memcpy(destination, source, size));
-	while (size > 0) {
+	while (size > 0)
+	{
 		size--;
 		dest[size] = src[size];
 	}

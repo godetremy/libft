@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int			ft_isascii(int character)
+int	ft_isascii(int character)
 {
 	return (character >= 0 && character <= 127);
 }

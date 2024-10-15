@@ -6,15 +6,16 @@
 /*   By: remy <rgodet@student.42angouleme.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 09:35:21 by remy              #+#    #+#             */
-/*   Updated: 2024/10/14 14:05:42 by remy             ###   ########.fr       */
+/*   Updated: 2024/10/15 08:58:49 by rgodet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_size	find_malloc_size(char const *str, char chr) {
-	int i;
-	int count;
+static t_size	find_malloc_size(char const *str, char chr)
+{
+	int	i;
+	int	count;
 
 	i = 0;
 	count = 0;
@@ -30,17 +31,7 @@ t_size	find_malloc_size(char const *str, char chr) {
 	return (count);
 }
 
-int get_start_pos(char const *str, char chr)
-{
-	int i;
-
-	i = 0;
-	while (str[i] == chr)
-		i++;
-	return (i);
-}
-
-char	**error_handling(char **res, int i)
+static char	**error_handling(char **res, int i)
 {
 	while (i >= 0)
 	{
@@ -51,8 +42,23 @@ char	**error_handling(char **res, int i)
 	return (0);
 }
 
-char **ft_split(char const *str, char chr) {
-	char **res;
+static int	iteration_is_char(char const *str, char chr, int i)
+{
+	while (str[i] == chr && str[i])
+		i += 1;
+	return (i);
+}
+
+static int	iteration_is_not_char(char const *str, char chr, int i)
+{
+	while (str[i] != chr && str[i])
+		i += 1;
+	return (i);
+}
+
+char	**ft_split(char const *str, char chr)
+{
+	char	**res;
 	int		i;
 	int		array_pos;
 	int		start_pos;
@@ -66,32 +72,15 @@ char **ft_split(char const *str, char chr) {
 	array_pos = 0;
 	while (str[i])
 	{
-		while (str[i] == chr && str[i])
-			i++;
+		i = iteration_is_char(str, chr, i);
 		if (str[i] == 0)
-			break;
+			break ;
 		start_pos = i;
-		while (str[i] != chr && str[i])
-			i++;
+		i = iteration_is_not_char(str, chr, i);
 		res[array_pos] = ft_substr(str, start_pos, i - start_pos);
 		if (!res[array_pos])
 			return (error_handling(res, i));
 		array_pos++;
 	}
-	return res;
+	return (res);
 }
-
-/*int main() {
-	int i;
-	char **trim = ft_split("   lorem   ipsum dolor     sit amet, consectetur   adipiscing elit. Sed non risus. Suspendisse   ", ' ');
-
-	i = 0;
-	while (trim[i])
-	{
-		printf("%s\n", trim[i]);
-		free(trim[i]);
-		i++;
-	}
-	free(trim);
-	return (1);
-}*/
