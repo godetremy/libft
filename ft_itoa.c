@@ -63,7 +63,7 @@ static char	*ft_itoaspecialcase(int num)
 	return (res);
 }
 
-void	ft_itoa_iteration(char	*res, int	*i, int *num)
+static void	ft_itoa_iteration(char	*res, int	*i, int *num)
 {
 	res[*i] = (*num % 10) + 48;
 	*num = *num / 10;
