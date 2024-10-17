@@ -63,8 +63,6 @@ char	**ft_split(char const *str, char chr)
 	int		array_pos;
 	int		start_pos;
 
-	if (ft_strlen(str) == 1)
-		return (ft_calloc(1, sizeof(char)));
 	res = ft_calloc(find_malloc_size(str, chr) + 1, sizeof(char *));
 	if (!res)
 		return (0);
