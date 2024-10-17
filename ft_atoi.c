@@ -6,7 +6,7 @@
 /*   By: remy <rgodet@student.42angouleme.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 09:34:26 by remy              #+#    #+#             */
-/*   Updated: 2024/10/10 16:01:38 by remy             ###   ########.fr       */
+/*   Updated: 2024/10/17 11:26:10 by rgodet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	ft_atoi(const char *str)
 	i = ft_strlen(str) - 1;
 	result = 0;
 	while (i > get_start_index(str) - !(str[get_start_index(str)] == '-'
-			|| str[get_start_index(str)] == '+') && !(str[i] == 43 && i == 0))
+			|| str[get_start_index(str)] == '+'))
 	{
 		if (ft_isdigit(str[i]))
 		{
