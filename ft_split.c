@@ -6,7 +6,7 @@
 /*   By: remy <rgodet@student.42angouleme.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 09:35:21 by remy              #+#    #+#             */
-/*   Updated: 2024/10/15 08:58:49 by rgodet           ###   ########.fr       */
+/*   Updated: 2024/10/17 10:43:56 by remy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ char	**ft_split(char const *str, char chr)
 		i = iteration_is_not_char(str, chr, i);
 		res[array_pos] = ft_substr(str, start_pos, i - start_pos);
 		if (!res[array_pos])
-			return (error_handling(res, i));
+			return (error_handling(res, array_pos - 1));
 		array_pos++;
 	}
 	return (res);
