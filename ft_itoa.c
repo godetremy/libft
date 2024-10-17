@@ -6,12 +6,11 @@
 /*   By: remy <rgodet@student.42angouleme.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 09:35:35 by remy              #+#    #+#             */
-/*   Updated: 2024/10/11 14:27:32 by remy             ###   ########.fr       */
+/*   Updated: 2024/10/17 10:49:22 by remy             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int	ft_intlen(int num)
 {
