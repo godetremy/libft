@@ -6,7 +6,7 @@
 /*   By: remy <rgodet@student.42angouleme.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 09:34:18 by remy              #+#    #+#             */
-/*   Updated: 2024/10/14 15:21:12 by remy             ###   ########.fr       */
+/*   Updated: 2024/10/21 10:54:37 by rgodet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,9 @@ char	*ft_strnstr(const char *str,	const char *to_find, t_size len)
 	t_size	j;
 
 	i = 0;
-	if (ft_strlen(to_find) == 0)
+	if (to_find[0] == '\0')
 		return ((char *) str);
-	if (len > ft_strlen(str))
-		len = ft_strlen(str);
-	while (len > i)
+	while (len > i && str[i])
 	{
 		if (str[i] == to_find[0])
 		{
