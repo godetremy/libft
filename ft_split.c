@@ -6,7 +6,7 @@
 /*   By: remy <rgodet@student.42angouleme.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 09:35:21 by remy              #+#    #+#             */
-/*   Updated: 2024/10/17 10:43:56 by remy             ###   ########.fr       */
+/*   Updated: 2024/10/21 10:56:13 by rgodet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ char	**ft_split(char const *str, char chr)
 	int		array_pos;
 	int		start_pos;
 
+	if (!str)
+		return (0);
 	res = ft_calloc(find_malloc_size(str, chr) + 1, sizeof(char *));
 	if (!res)
 		return (0);
