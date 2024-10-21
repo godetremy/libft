@@ -6,7 +6,7 @@
 /*   By: remy <rgodet@student.42angouleme.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 17:10:24 by remy              #+#    #+#             */
-/*   Updated: 2024/10/09 17:05:12 by remy             ###   ########.fr       */
+/*   Updated: 2024/10/21 10:57:36 by rgodet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	int	i;
 
+	if (!s || !(f))
+		return ;
 	i = 0;
 	while (s[i])
 	{
