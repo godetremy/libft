@@ -6,31 +6,39 @@
 /*   By: rgodet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 1970/01/01 01:00:00 by rgodet            #+#    #+#             */
-/*   Updated: 2024/10/15 15:35:12 by rgodet           ###   ########.fr       */
+/*   Updated: 2024/10/21 10:04:13 by rgodet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static t_list	*error_handling(t_list *res, void (*del)(void *), void *content)
+{
+	del(content);
+	if (res != NULL)
+		ft_lstclear(&res, del);
+	return (NULL);
+}
+
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*res;
 	t_list	*temp;
+	void	*content;
 
-	if (lst == NULL)
+	if (lst == NULL || f == NULL || del == NULL)
 		return (NULL);
-	res = ft_lstnew(f(lst->content));
+	content = f(lst->content);
+	res = ft_lstnew(content);
 	if (!res)
-		return (NULL);
+		return (error_handling(0, del, content));
 	lst = lst->next;
 	while (lst)
 	{
-		temp = ft_lstnew(f(lst->content));
+		content = f(lst->content);
+		temp = ft_lstnew(content);
 		if (!temp)
-		{
-			ft_lstclear(&res, del);
-			return (NULL);
-		}
+			return (error_handling(res, del, content));
 		ft_lstadd_back(&res, temp);
 		lst = lst->next;
 	}
