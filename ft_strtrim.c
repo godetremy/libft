@@ -6,7 +6,7 @@
 /*   By: remy <rgodet@student.42angouleme.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 09:35:06 by remy              #+#    #+#             */
-/*   Updated: 2024/10/11 14:56:15 by remy             ###   ########.fr       */
+/*   Updated: 2024/10/21 10:15:56 by rgodet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ char	*ft_strtrim(char const *str, char const *set)
 	char			*res;
 
 	i = 0;
+	if (!str || !set)
+		return (NULL);
 	if (ft_strlen(str) == 0)
 		return (ft_strdup(""));
 	while (str[i] && ft_ischrinset(str[i], set))
@@ -44,9 +46,7 @@ char	*ft_strtrim(char const *str, char const *set)
 		i--;
 	end_len = i - start_index + 1;
 	if (end_len == 0)
-	{
 		return (ft_strdup(""));
-	}
 	res = ft_substr(str, start_index, end_len);
 	return (res);
 }
