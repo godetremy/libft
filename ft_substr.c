@@ -6,7 +6,7 @@
 /*   By: remy <rgodet@student.42angouleme.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 09:34:50 by remy              #+#    #+#             */
-/*   Updated: 2024/10/14 14:06:53 by remy             ###   ########.fr       */
+/*   Updated: 2024/10/21 10:55:03 by rgodet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *str, unsigned int start, t_size len)
 	t_size	i;
 	t_size	str_len;
 
+	if (str == NULL)
+		return (NULL);
 	str_len = ft_strlen(str);
 	if (start >= ft_strlen(str))
 		return (ft_calloc(1, sizeof(char)));
