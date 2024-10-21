@@ -6,7 +6,7 @@
 /*   By: remy <rgodet@student.42angouleme.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 09:45:53 by remy              #+#    #+#             */
-/*   Updated: 2024/10/15 15:28:12 by rgodet           ###   ########.fr       */
+/*   Updated: 2024/10/21 10:30:47 by rgodet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef unsigned int	t_size;
+typedef unsigned long	t_size;
 
 typedef struct s_list
 {
@@ -47,7 +47,7 @@ char	*ft_strchr(const char *str, int chr);
 char	*ft_strdup(const char *source);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_strjoin(char const *s1, char const *s2);
-int		ft_strlcat(char *dst, const char *src, t_size size);
+t_size	ft_strlcat(char *dst, const char *src, t_size size);
 int		ft_strlcpy(char *dst, const char *src, t_size size);
 t_size	ft_strlen(const char *theString);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
