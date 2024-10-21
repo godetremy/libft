@@ -6,7 +6,7 @@
 /*   By: remy <rgodet@student.42angouleme.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 09:36:02 by remy              #+#    #+#             */
-/*   Updated: 2024/10/09 16:29:32 by remy             ###   ########.fr       */
+/*   Updated: 2024/10/21 10:56:58 by rgodet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_putstr_fd(char *str, int fd)
 {
-	write(fd, str, ft_strlen(str));
+	if (str != NULL)
+		write(fd, str, ft_strlen(str));
 }

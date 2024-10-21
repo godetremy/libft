@@ -6,7 +6,7 @@
 /*   By: remy <rgodet@student.42angouleme.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 09:36:09 by remy              #+#    #+#             */
-/*   Updated: 2024/10/09 11:50:02 by remy             ###   ########.fr       */
+/*   Updated: 2024/10/21 10:57:09 by rgodet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putendl_fd(char *str, int fd)
 {
+	if (str == NULL)
+		return ;
 	ft_putstr_fd(str, fd);
 	ft_putchar_fd('\n', fd);
 }
