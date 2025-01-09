@@ -16,6 +16,10 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 256
+# endif
+
 typedef unsigned long	t_size;
 
 typedef struct s_list
@@ -58,6 +62,11 @@ char	*ft_strtrim(char const *str, char const *set);
 char	*ft_substr(char const *str, unsigned int start, t_size len);
 int		ft_tolower(int character);
 int		ft_toupper(int character);
+
+int				has_newline(char *str);
+void			add_str_to_stash(char *str, char **stash);
+void			trim_stash(char **stash);
+char			*get_next_line(int fd);
 
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
