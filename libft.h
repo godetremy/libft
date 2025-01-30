@@ -6,7 +6,7 @@
 /*   By: remy <rgodet@student.42angouleme.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 09:45:53 by remy              #+#    #+#             */
-/*   Updated: 2024/10/21 10:30:47 by rgodet           ###   ########.fr       */
+/*   Updated: 2025/01/20 10:40:15 by rgodet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,10 +63,10 @@ char	*ft_substr(char const *str, unsigned int start, t_size len);
 int		ft_tolower(int character);
 int		ft_toupper(int character);
 
-int				has_newline(char *str);
-void			add_str_to_stash(char *str, char **stash);
-void			trim_stash(char **stash);
-char			*get_next_line(int fd);
+int		has_newline(char *str);
+void	add_str_to_stash(char *str, char **stash);
+void	trim_stash(char **stash);
+char	*get_next_line(int fd);
 
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
