@@ -6,7 +6,7 @@
 /*   By: remy <rgodet@student.42angouleme.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 09:45:53 by remy              #+#    #+#             */
-/*   Updated: 2025/01/30 10:21:00 by rgodet           ###   ########.fr       */
+/*   Updated: 2025/03/20 10:34:04 by rgodet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int				ft_isalpha(int character);
 int				ft_isascii(int character);
 int				ft_isdigit(int character);
 int				ft_isprint(int character);
+int				ft_isspace(int c);
 char			*ft_itoa(int num);
 void			*ft_memchr(const void *memory, int value, t_size size);
 int				ft_memcmp(const void *memory1, const void *memory2,
