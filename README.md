@@ -285,3 +285,9 @@ The `ft_isspace` function checks if the passed character is a white-space charac
 char	**ft_splitf(char const *str, int (is_chr)(int));
 ```
 The `ft_splitf` function splits the string `str` using the function `is_chr` as a delimiter and returns an array of strings.
+
+#### ft_straddchr
+```C
+char	*ft_straddchr(char *str, char c);
+```
+The `ft_straddchr` function adds the character `c` at the end of the string `str`.
