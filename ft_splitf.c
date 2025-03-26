@@ -6,7 +6,7 @@
 /*   By: remy <rgodet@student.42angouleme.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 09:35:21 by remy              #+#    #+#             */
-/*   Updated: 2025/03/26 10:02:36 by rgodet           ###   ########.fr       */
+/*   Updated: 2025/03/26 13:34:00 by rgodet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static int	iteration_is_char(char const *str, int (is_chr)(int), int i)
 }
 
 static int	iteration_is_not_char(char const *str, int (is_chr)(int),
-                                 int i)
+									int i)
 {
 	while (str[i] && !is_chr(str[i]))
 		i += 1;
@@ -59,7 +59,7 @@ static int	iteration_is_not_char(char const *str, int (is_chr)(int),
 
 char	**ft_splitf(char const *str, int (is_chr)(int))
 {
-	char		**res;
+	char	**res;
 	int		i;
 	int		array_pos;
 	int		start_pos;
@@ -85,4 +85,3 @@ char	**ft_splitf(char const *str, int (is_chr)(int))
 	}
 	return (res);
 }
-

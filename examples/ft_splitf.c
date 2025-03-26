@@ -6,7 +6,7 @@
 /*   By: rgodet <rgodet@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 09:58:23 by rgodet            #+#    #+#             */
-/*   Updated: 2025/03/26 10:04:47 by rgodet           ###   ########.fr       */
+/*   Updated: 2025/03/26 13:34:41 by rgodet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,19 @@
 // Compile with:
 // gcc ft_splitf.c -L.. -lft
 //
-
-int main(void)
+int	main(void)
 {
-    char    **split;
-    int     i;
+	char	**split;
+	int		i;
 
-    split = ft_splitf("Hello,world!\nHowyou?", ft_isspace);
-    i = 0;
-    while (split[i] != NULL)
-    {
-        printf("Split[%d]: %s\n", i, split[i]);
-        free(split[i]);
-        i++;
-    }
-    free(split);
-    return (0);
+	split = ft_splitf("Hello,world!\nHowyou?", ft_isspace);
+	i = 0;
+	while (split[i] != NULL)
+	{
+		printf("Split[%d]: %s\n", i, split[i]);
+		free(split[i]);
+		i++;
+	}
+	free(split);
+	return (0);
 }
