@@ -6,7 +6,7 @@
 /*   By: remy <rgodet@student.42angouleme.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 09:45:53 by remy              #+#    #+#             */
-/*   Updated: 2025/03/20 10:34:04 by rgodet           ###   ########.fr       */
+/*   Updated: 2025/03/26 10:02:59 by rgodet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ void			ft_putendl_fd(char *str, int fd);
 void			ft_putnbr_fd(int nb, int fd);
 void			ft_putstr_fd(char *str, int fd);
 char			**ft_split(char const *str, char chr);
+char			**ft_splitf(char const *str, int (is_chr)(int));
 char			*ft_strchr(const char *str, int chr);
 char			*ft_strdup(const char *source);
 void			ft_striteri(char *s, void (*f)(unsigned int, char*));
