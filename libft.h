@@ -85,4 +85,6 @@ t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 
 unsigned int	ft_rand(unsigned int min, unsigned int max);
 
+void			ft_freesplit(char **split);
+
 #endif
